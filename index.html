@@ -22,7 +22,12 @@
                         </svg>
                         <span class="logo-text">Imobiliária Santos</span>
                     </div>
-                    <ul class="nav-menu">
+                    <button class="hamburger" id="hamburger" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu" id="navMenu">
                         <li><a href="#inicio">Início</a></li>
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#servicos">Serviços</a></li>
@@ -49,7 +54,7 @@
         <div class="container">
             <div class="sobre-content">
                 <div class="sobre-image">
-                    <img src="https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Imóveis de luxo">
+                    <img src="imagens/mulher-no-sofa-assistindo-tv.jpg" alt="Mulher relaxando em casa">
                 </div>
                 <div class="sobre-text">
                     <h2 class="section-title">Encontre o imóvel dos seus sonhos</h2>
@@ -229,5 +234,23 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const navLinks = document.querySelectorAll('.nav-menu a');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
