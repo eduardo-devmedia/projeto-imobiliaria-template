@@ -417,6 +417,16 @@ body {
     line-height: 1.6;
 }
 
+.whatsapp-link {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.whatsapp-link:hover {
+    color: #25D366;
+}
+
 /* Footer */
 .footer {
     background-color: var(--text-dark);
